@@ -42,6 +42,13 @@ function employeeform({
     
     const handlesubmit=(e)=>{
         e.preventdefault();
+        if(!form.name||!form.email||form.department|| !form.salary)
+        {
+            alert("fill the all section carefully");
+            return;
+
+        }
+        if(form.sala)
         if(editingEmployee){
              onUpdateEmployee({
                 ...editingEmployee,
@@ -109,3 +116,4 @@ return(
     </div>
 );
 }
+export default employeeform;

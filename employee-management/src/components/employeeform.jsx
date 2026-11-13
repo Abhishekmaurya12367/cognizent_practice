@@ -48,7 +48,10 @@ function employeeform({
             return;
 
         }
-        if(form.sala)
+        if(number(form.salar)<=0){
+          alert("salary must be grater then 0")
+          return;
+        }
         if(editingEmployee){
              onUpdateEmployee({
                 ...editingEmployee,

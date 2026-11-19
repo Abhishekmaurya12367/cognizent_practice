@@ -41,5 +41,33 @@ const useSchema=new Schema({
     }
 },{timestamps:true});
 const addressSchema=new Schema({
+    userId:{
+        type:Schema.Types.ObjectId,
+        ref:"user",
+        required:true
+    }
+    ,
+    fullname:{
+        type:string,
+        required:true,  
+    },
+    phone:{
+        type:string,
+        require:true
+    },
+    addressLine1:{
+        type:string,
+        required:true, 
+    },
+    addressLine2:{
+        type:string,
+        required:true
+    }
+    ,
+    city:{
+        type:string , 
+        required:true
+    }
+    ,
     
 })

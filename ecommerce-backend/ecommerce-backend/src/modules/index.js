@@ -5,5 +5,36 @@ const useSchema=new Schema({
         type:string,
         require:true,
         trim:true
+    },
+    email:{
+        type:string,
+        require:true,
+        unique:true,
+        lowercase:true,
+        trim:true
+    }
+    ,
+    password:{
+        type:string,
+        require:true,
+        select:false
+    }
+    ,
+    phone:string,
+    role:{
+        type:string,
+        enum:["admin","customer"],
+        default:customer
+    }
+    ,
+    accountStatus:{
+        type:string,
+        enum:["active","blocked"],
+        default:"active"
+
+    }
+    ,
+    isVarified:{
+
     }
 })

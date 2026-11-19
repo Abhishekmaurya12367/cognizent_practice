@@ -69,5 +69,11 @@ const addressSchema=new Schema({
         required:true
     }
     ,
+    state:{
+        type:string,
+        required:true
+    }
+    ,
     
+
 })

@@ -35,6 +35,11 @@ const useSchema=new Schema({
     }
     ,
     isVarified:{
+        type:Boolean,
+        default:false
 
     }
+},{timestamps:true});
+const addressSchema=new Schema({
+    
 })

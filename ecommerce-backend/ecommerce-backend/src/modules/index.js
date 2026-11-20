@@ -119,5 +119,19 @@ const categorySchema=new Schema({
 
 },{timestamps:true});
 const productSchema=new Schema({
-    
+    name:{
+        type:string,
+        required:true
+    },
+    slug:{
+      type:string,
+      required:true,
+      unique:true
+    },
+    brand:{
+    type:string,
+
+    }
+
+
 })

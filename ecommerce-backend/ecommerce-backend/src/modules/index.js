@@ -130,8 +130,26 @@ const productSchema=new Schema({
     },
     brand:{
     type:string,
+     required:true
+    },
+    discription:{
+        type:string,
+        required:true
 
+    },
+    categoryId:{
+        type:Schema.Types.ObjectId,
+        ref:"Category",
+        required:true
     }
+    ,
+    image:[string],
+    tags:[string],
+ isActive:{
+    type:Boolean,
+    default:true
+ }
+},{timestamps:true});
+productSchema.index({categoryId:1,isActive:1});
+productSchema.index({name:"text",discription:"text"});
 
-
-})

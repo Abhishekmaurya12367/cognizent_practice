@@ -152,4 +152,14 @@ const productSchema=new Schema({
 },{timestamps:true});
 productSchema.index({categoryId:1,isActive:1});
 productSchema.index({name:"text",discription:"text"});
+const productvarient=new Schema({
+
+})
+
+//basic promises code actually how we write 
+const promises=new promises((resolve,reject)=>{
+    
+
+})
+
 

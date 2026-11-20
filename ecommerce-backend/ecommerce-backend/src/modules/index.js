@@ -74,6 +74,27 @@ const addressSchema=new Schema({
         required:true
     }
     ,
-    
+   country:{
+    type:string,
+    required:true
+   },
+  postCode:{
+    type:string,
+    required:true
+   },
+   addressType:{
+     type:string,
+     enum:["work","home","other"],
+     required:true
+   }
+   ,
+   isdefault:{
+    type:Boolean,
+    default:true
+   }
 
+},{timeStamps:true});
+
+const categorySchema=new Schema({
+    
 })

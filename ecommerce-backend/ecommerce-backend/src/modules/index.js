@@ -96,5 +96,28 @@ const addressSchema=new Schema({
 },{timeStamps:true});
 
 const categorySchema=new Schema({
+    name:{
+        type:string,
+        required:true
+    }
+    ,
+    slug:{
+        type:string,
+        required:true,
+        unique:true
+    },
+    parentId:{
+        type:Schema.types.ObjectId,
+        ref:"Category",
+        default:null
+    },
+    description:string,
+    isActive:{
+        type:Boolean,
+        default:true
+    }
+
+},{timestamps:true});
+const productSchema=new Schema({
     
 })

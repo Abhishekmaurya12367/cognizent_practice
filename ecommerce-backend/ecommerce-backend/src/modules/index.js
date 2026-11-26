@@ -14,6 +14,7 @@ const userSchema = new Schema({
         minlength: 2,
         maxlength: 100
     },
+    // thid is my database where i am practicing the code line by line otherwise there is lot of other thing 
     email: {
         type: String,
         required: true,
